@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Detalhes do personagem</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card>
+    <img [src]="character.image" alt="char">
+    <ion-card-content>
+      <ion-card-title>
+        {{character.name}}
+      </ion-card-title>
+      <span>Ano de nascimento: {{character.birth_year}}</span>
+      <br>
+      <span>Planeta natal: {{character.homeworld}}</span>
+      <h2>Filmes</h2>
+      <ul>
+        <li *ngFor="let film of character.films">{{film}}</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

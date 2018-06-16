@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Naves</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <img src="assets/imgs/starwars.png" alt="Capa">
+  <ion-searchbar (ionInput)="search($event)" placeholder="Pesquisar..."></ion-searchbar>
+  <ion-list>
+    <button ion-item *ngFor="let starship of starships" (click)="navigate(starship)">
+      <ion-avatar item-start>
+        <img [src]="starship.image" alt="Avatar">
+      </ion-avatar>
+      <h2>{{starship.name}}</h2>
+    </button>
+  </ion-list>
+</ion-content>
